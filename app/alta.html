@@ -43,29 +43,54 @@
         <!-- /.container-fluid -->
     </nav>
     <div class="container">
-        <form class="form-horizontal">
+        <div id="errores" class="col-sm-offset-2"></div>
+        <form id="frmalta" class="form-horizontal" novalidate>
             <div class="form-group">
                 <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre">
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email" placeholder="Introduce tu email">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Introduce tu email">
                 </div>
             </div>
             <div class="form-group">
                 <label for="email2" class="col-sm-2 control-label">Email ¡otra vez!</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email2" placeholder="Introduce otra vez tu email">
+                    <input type="email" class="form-control" id="email2" name="email2" placeholder="Introduce otra vez tu email">
                 </div>
             </div>
             <div class="form-group">
-                <label for="edad" class="col-sm-2 control-label">Nombre</label>
+                <label for="edad" class="col-sm-2 control-label">Edad</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="edad" placeholder="Introduce tu edad">
+                    <input type="text" class="form-control" id="edad" name="edad" placeholder="Introduce tu edad">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cuenta" class="col-sm-2 control-label">Nº Cuenta</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="cuenta" name="cuenta" placeholder="Introduce tu cuenta bancaria">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nif" class="col-sm-2 control-label">NIF</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduce tu nif">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="url" class="col-sm-2 control-label">Sitio Web</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="url" name="url" placeholder="Introduce tu web">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comentarios" class="col-sm-2 control-label">Comentarios</label>
+                <div class="col-sm-4">
+                    <textarea name="comentarios" id="comentarios" class="form-control" rows="10"></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -78,6 +103,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.) scripts/plugins.js -->
@@ -94,8 +120,9 @@
     <script src="bower_components/bootstrap/js/collapse.js"></script>
     <script src="bower_components/bootstrap/js/tab.js"></script>
     <!-- endbuild -->
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <!-- build:js({app,.tmp}) scripts/alta.js -->
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/alta.js"></script>
     <!-- endbuild -->
 </body>
 
